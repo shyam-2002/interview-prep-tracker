@@ -1,0 +1,37 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="/">DECODE JOBS</a></h1>
+    <a class="logo me-auto"><img src="/img/logo1.png" alt="" class="img-fluid"></a>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li class="drop-down"><a href="/topics">Courses</a>
+          <ul>
+            <li><a href="#">Array</a></li>
+            <li><a href="#">Linked List</a></li>
+            <li><a href="#">Tress</a></li>
+            <li><a href="#">Binary Tress</a></li>
+            <li><a href="#">Dynamic Programming</a></li>
+          </ul>
+        </li>
+        <li><a href="/companies">Experience</a></li>
+        <% if(!user){ %>
+          <a href="/login" class="get-started-btn">Get Started</a>
+          <% }else{ %>
+
+            <li>
+              <%= user.user_name%>
+            </li>
+            <li><a href="/logout">Log Out</a></li>
+            <% } %>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+
+
+  </div>
+</header><!-- End Header -->
