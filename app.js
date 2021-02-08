@@ -40,19 +40,19 @@ app.use(admin_rootpath, router);
 app.set("view engine", "ejs");
 app.use(express.static("./public"))
 app.use(express.json());                                      //parses json data
-app.use(express.urlencoded({extended : true}));               //parses x-www-form-urlencoded data
+app.use(express.urlencoded({extended : true, limit : '50mb'}));               //parses x-www-form-urlencoded data
 app.use(cookieParser());
 
 
 app.use('*/', isUser);
 
-app.use("*/topics", auth_function);
+app.use("*/topics", auth_function);                           //auth_function middleware will be used whenever there is a requrest to topic related routes
 
 app.use(gen_router);
 app.use(log_sign_router);
 
+app.use(   topic_router);
 
-app.use( topic_router);
 app.use(experience_router);
 
 
