@@ -29,6 +29,19 @@ const topic_schema  = new Schema({
         type : String,
         required : true,
         unique : true
+    },
+    topic_tag : {
+        type : String,
+        required : true,
+    },
+    topic_description : {
+        type : String,
+        required : true,
+        minlength : [10, "Description is too short"]
+    },
+    image_path : {
+        type : String,
+        required : true
     }
 })
 

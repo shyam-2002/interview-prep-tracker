@@ -8,7 +8,12 @@ const company_schema = new Schema({
         type : String,
         required:  true,
         unique : true
+    },
+    company_image : {
+        type : String,
+        required : true
     }
+
 })
 
 const experience_schema = new Schema({
@@ -20,13 +25,21 @@ const experience_schema = new Schema({
         type : Schema.Types.ObjectId,
         ref : 'company'
     },
+    // exp : {
+    //     type : String,
+    //     required : true,
+    //     minlength : [50, 'Experience is too short']
+    // },
     image_buffer : {
-        type : Buffer,
-        required : true
+        type : Buffer
     },
     image_type : {
-        type : String,
-        required : true
+        type : String
+        
+    },
+    isApproved : {
+        type : Boolean,
+        default : true
     }
 })
 
