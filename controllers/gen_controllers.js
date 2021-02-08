@@ -3,11 +3,11 @@
 
 
 const home_controller = (req, res)=>{
-    res.render("home");
+    res.render("home", {title : 'Home'});
 }
 
 const aboutus_controller = (req, res)=>{
-    res.render("aboutus", {})
+    res.render("aboutus", {title : "About Us"})
 }
 
 module.exports = {

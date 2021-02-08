@@ -7,6 +7,7 @@ const jwt  = require("jsonwebtoken");
 const {user_model} = require("../models/user_schema");
 
 const {handle_err} = require("../Error_handeling/user_log_sign_errors");
+const { nextTick } = require("process");
 
 const maxAge = 3*24*3600;
 
@@ -17,22 +18,22 @@ const create_token = function(id){
 
 
 const login_get = (req, res)=>{
-    res.render("login", {})
+    res.render("login", {title : "Login"})
 }
 
 
 const signup_get = (req, res)=>{
-    res.render("signup", {})
+    res.render("signup", {title : "Sign Up"})
 }
 
 
-const login_post = async (req, res)=>{
+const login_post = async (req, res, next)=>{
     const {email , password} = req.body;
     try{
         const user = await user_model.login(email, password);
         const token = create_token(user._id);
         res.cookie("jwt", token, {maxAge : maxAge*1000, httpOnly : true});
-        res.redirect("/");
+        res.redirect("/topics");
     }
     catch(err){
         const errors = handle_err(err);
