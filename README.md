@@ -19,4 +19,4 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 
 ### Here are screenshots of some of the pages :
 * Home Page:
-<img src = "https://github.com/shyam-2002/iterviewtracker_final/blob/master/public/readme_images/home.png">
+<img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/home.png">
