@@ -9,5 +9,5 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 
 ### Installation :
 * Download the package and run the following command in your nodejs workspace :
- #npm-install
+<pre>npm-install<pre>
 
