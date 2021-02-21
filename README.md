@@ -1,5 +1,5 @@
 # Decode-Jobs
-We have tried to create a solution for interview preperation of campus janta. When placement season approaches near one cannot waste his time searching for most important type of questions. So we have made a platform where you can practice important questions in each topic and sharp your skills. One can also share his interview experience. Right now this project is on ground scale and it can be modefied time to time.
+We have tried to create a solution for interview preperation of campus janta. When placement season approaches near one cannot waste his time searching for most important type of questions. So we have made a platform where you can practice important questions in each topic and sharp your skills. One can also share his interview experience. Right now this project is on ground scale but it can be further modified.
 ### Tools used :
 * Node JS
 * Mongo DB
