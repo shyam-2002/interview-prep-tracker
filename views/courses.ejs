@@ -1,145 +1,156 @@
 <%- include('./partials/head.ejs') %>
-<%- include('./partials/header.ejs') %>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <%- include('./partials/header.ejs') %>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
+    <main id="main">
 
-<main id="main">
-    <!-- ======= Popular Courses Section ======= -->
-    <section id="popular-courses" class="courses">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Courses</h2>
-          <p></p>
-        </div>
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-           <% topics.forEach(topic=>{ %>
-              <% const topic_name = topic.topic_name %>
-            
-             <% const topic_uppercase_name = topic_name.toUpperCase() %>
-             
-              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="<%= topic.image_path%>" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><%= topic.topic_tag %></h4>
-                  <p class="price">Free</p>
-                </div>
-
-                <h3><a href="/topics/<%= topic_name %>"><%= topic_uppercase_name %></a></h3>
-                <p><%= topic.topic_description %></p>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-            <% }) %>
-            
-            
-
-          
-          
-
-        </div>
-
+      <div class="lower_header">
+        <div class="add">
+        <a href="#myModal" class="trigger-btn" data-toggle="modal">Add Question</a>
       </div>
-    </section><!-- End Popular Courses Section -->
+      <!-- ======= Popular Courses Section ======= -->
+      <section id="popular-courses" class="courses">
+        <div class="container" data-aos="fade-up">
+<div class="section-title">
+        <h2>Courses</h2>
+        <p></p>
+      </div>
+      <br><br><br>
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <% topics.forEach(topic=>{ %>
+              <% const topic_name=topic.topic_name %>
+
+                <% const topic_uppercase_name=topic_name.toUpperCase() %>
+
+                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item">
+                      <img src="<%= topic.image_path%>" class="img-fluid" alt="...">
+                      <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <h4>
+                            <%= topic.topic_tag %>
+                          </h4>
+                          <p class="price">Free</p>
+                        </div>
+
+                        <h3><a href="/topics/<%= topic_name %>" target="_blank">
+                            <%= topic_uppercase_name %>
+                          </a></h3>
+                        <p>
+                          <%= topic.topic_description %>
+                        </p>
+                      </div>
+                    </div>
+                  </div> <!-- End Course Item-->
+
+                  <% }) %>
 
 
-		<div class="add">
-			<a href="#myModal" class="trigger-btn"  data-toggle="modal" >Add Question</a>
-		</div>
-	
-<div id="myModal" class="modal fade">
-    <div class="modal-dialog modal-login">
-        <div class="modal-content">
-            <div class="modal-header">              
-                <h4 class="modal-title">Add Question</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+
+
+
+          </div>
+
+        </div>
+      </section><!-- End Popular Courses Section -->
+
+
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Question</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                <form class="form" >
-                    <label for="form-group">Question Name : </label>
-                        <input type="text" class="form-control" id = "form-group" placeholder="Question" name = "question_name" required>
-                    <div class="question_name_error">
+              <form class="form">
+                <label for="form-group">Question Name : </label>
+                <input type="text" class="form-control" id="form-group" placeholder="Question" name="question_name"
+                  required>
+                <div class="question_name_error">
 
-                    </div>
-                   
-                    <label for="topic">Topic : </label>
-                    <select name="question_topic" id="topic" class="form-control" required>
-                     <% topics.forEach(topic=>{  %>
-                        <% const topic_name = topic.topic_name; %>
-                        <% const topic_uppercase_name = topic_name.toUpperCase(); %>
-                        <option value="<%= topic_name%>"><%= topic_uppercase_name %></option>
-                      <% }) %>
-                      
-                    </select>
-<!-- 
+                </div>
+
+                <label for="topic">Topic : </label>
+                <select name="question_topic" id="topic" class="form-control" required>
+                  <% topics.forEach(topic=>{ %>
+                    <% const topic_name=topic.topic_name; %>
+                      <% const topic_uppercase_name=topic_name.toUpperCase(); %>
+                        <option value="<%= topic_name%>">
+                          <%= topic_uppercase_name %>
+                        </option>
+                        <% }) %>
+
+                </select>
+                <!-- 
                     <label for="form-group">Topic : </label>
                         <input type="text" class="form-control" id = "form-group" placeholder="Topic" name="question_topic" required>                     -->
-                     <div class="question_topic_error">
+                <div class="question_topic_error">
 
-                    </div>
-                    
-                   
-                    <label for="form-group">Question Link : </label>
-                        <input type="text" class="form-control" id = "form-group" placeholder="Question Link" name="question_link" required>
-                    
-                   <div class="question_link_error">
+                </div>
 
-                    </div>
-                    
-                        <input type="submit" class="btn btn-primary btn-block btn-lg submit" value="Submit" required>
-                    
-                </form>
+
+                <label for="form-group">Question Link : </label>
+                <input type="text" class="form-control" id="form-group" placeholder="Question Link" name="question_link"
+                  required>
+
+                <div class="question_link_error">
+
+                </div>
+
+                <input type="submit" class="btn btn-primary btn-block btn-lg submit" value="Submit" required>
+
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-</div> 
+      </div>
 
-  </main><!-- End #main -->
-  <%- include('partials/footer.ejs') %>
+    </main><!-- End #main -->
+    <%- include('partials/footer.ejs') %>
 
-  <script>
-    const form = document.querySelector(".form");
-      const question_name_error = document.querySelector(".question_name_error");
+      <script>
+        const form = document.querySelector(".form");
+        const question_name_error = document.querySelector(".question_name_error");
         const question_topic_error = document.querySelector(".question_topic_error");
         const question_link_error = document.querySelector(".question_link_error");
         const submit_btn = document.querySelector(".submit");
-    submit_btn.addEventListener("click", async(e)=>{
-        e.preventDefault();
-        const question_name = form.question_name.value;
-        const question_topic = form.question_topic.value;
-        const question_link = form.question_link.value;
+        submit_btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+          const question_name = form.question_name.value;
+          const question_topic = form.question_topic.value;
+          const question_link = form.question_link.value;
 
-              question_name_error.innerText = '';
-              question_link_error.innerText = '';
-              question_topic_error.innerText = '';
+          question_name_error.innerText = '';
+          question_link_error.innerText = '';
+          question_topic_error.innerText = '';
 
-        try{
+          try {
             const res = await fetch("/add_questions", {
-                method : 'POST',
-                body : JSON.stringify({
-                    question_name, question_topic, question_link
-                }),
-                headers : {'Content-Type': 'application/json'}
+              method: 'POST',
+              body: JSON.stringify({
+                question_name, question_topic, question_link
+              }),
+              headers: { 'Content-Type': 'application/json' }
             })
-            if(res.redirected){
-                window.location.href = res.url;
+            if (res.redirected) {
+              window.location.href = res.url;
             }
-            const data  = await res.json();
+            const data = await res.json();
             // console.log(data);
             // console.log(data.errors);
-            if(data.errors){
+            if (data.errors) {
               question_name_error.innerText = data.errors.question_name;
               question_link_error.innerText = data.errors.question_link;
               question_topic_error.innerText = data.errors.question_topic;
             }
-        }
-        catch(err){
-               console.log(err);
-        }
-    })
-</script>
+          }
+          catch (err) {
+            console.log(err);
+          }
+        })
+      </script>

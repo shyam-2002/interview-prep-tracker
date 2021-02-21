@@ -16,11 +16,19 @@
             <div class="container-fluid">
 			<div class="row">
 				<div class="col-10">
-				  <h3> <%= question.question_name %></h3>
+					
+						<h3><%= question.question_name %></h3>
+							 
 				</div>
 				<div class="col-2">
-					<a href="<%= question.question_link %>" target="_blank" class="question-btn">Go to Question</a>
-				</div>
+				        <div class="tooltip">
+							<a href="<%= question.question_link %>" target="_blank" class="question-btn ">Go to Question</a>
+
+						<span class="tooltiptext"><%= question.question_link%></span>
+							
+						</div>
+							
+			</div>
 				
 			</div>
 		</div>

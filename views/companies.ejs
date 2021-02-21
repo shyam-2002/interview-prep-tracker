@@ -18,18 +18,23 @@
 
 <%- include('partials/header.ejs') %>
 
+<% if(user != null){ %>
+    <div class="add">
+    <a href="#myModal" class="trigger-btn"  data-toggle="modal">Add Experience</a>
+</div>
+
+<% } %>
+
 <div class="container1">
     <div class="row">
 <% companies.forEach(company=>{ %>
-         <div class="col-3">
-            <a href="/companies/<%= company.company_name%>"><img src="/img/google.jpg" alt="Avatar"></a>
+         <div class="col-4">
+            <a href="/companies/<%= company.company_name%>" target="_blank"><img class = "company_image" src="<%= company.company_image%>" alt="Avatar"></a>
     </div>
 <% }) %>
 </div>
 
-<div class="add">
-    <a href="#myModal" class="trigger-btn"  data-toggle="modal">Add Experience</a>
-</div>
+
 
 
 </div>
@@ -40,7 +45,7 @@
 <div class="modal-dialog modal-login">
 <div class="modal-content">
     <div class="modal-header">              
-        <h4 class="modal-title">Add Question</h4>
+        <h4 class="modal-title">Add Experience</h4>
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     </div>
     <div class="modal-body">
@@ -53,29 +58,30 @@
            
             <label for="company">Company : </label>
             <select name="company_name" id="company" class="form-control" required>
-              <option value="Google">Google</option>
-              <option value="microsoft">microsoft</option>
-              <option value="apple">apple</option>
+                <% companies.forEach(company=>{ %>
+                    <% const company_name = company.company_name; %>
+                    <% const company_name_uppercase  = company_name.toUpperCase(); %>
+                      <option value="<%= company_name%>"><%= company_name_uppercase%></option>
+                <% }) %>
+            
             </select>
-<!-- 
-            <label for="form-group">Topic : </label>
-                <input type="text" class="form-control" id = "form-group" placeholder="Topic" name="question_topic" required>                     -->
+
+            <!-- <label for="form-group">Topic : </label>
+                <input type="text" class="form-control" id = "form-group" placeholder="Topic" name="question_topic" required>                    
              <div class="company_name_error">
 
-            </div>
+            </div> -->
             <label for="image">Image : </label>
             <input type="file" id = "image" class="filepond"  name = "image" required>
-            <input type="submit" class="btn btn-primary btn-block btn-lg submit" value="Submit" required>
+          
+            <label for="form-group">Experience : </label>
+                <textarea type="text" class="form-control" id = "form-group" placeholder="Your Experience" name="exp" required></textarea>
+          
+                <br>
+           <input type="submit" class="btn btn-primary btn-block btn-lg submit" value="Submit" required>
             
-           
-            <!-- <label for="form-group">Experience : </label>
-                <textarea type="text" class="form-control" id = "form-group" placeholder="Your Experience" name="exp" required>
             
-           <div class="exp_error">
-
-            </div>
-            
-                 -->
+                
         </form>
     </div>
 </div>
