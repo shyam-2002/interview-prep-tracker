@@ -1,3 +1,4 @@
+<img src = "">
 # Decode-Jobs
 We have tried to create a solution for interview preperation of campus janta. When placement season approaches near one cannot waste his time searching for most important type of questions. So we have made a platform where you can practice important questions in each topic and sharp your skills. One can also share his interview experience. Right now this project is on ground scale but it can be further modified.
 ### Tools used :
@@ -44,3 +45,6 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 
 * About Page :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/about_page.png">
+
+### Contributers :
+This project is developed by Shyam Sundar Goyal, Harsh Sinha and Vipul Kumar under the guidance of Coding Club IIT Guwahati.
