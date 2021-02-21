@@ -5,7 +5,7 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * Mongo DB
 * Experess JS
 * User Authentication using jwt
-* Admin bro for admin panel
+* Admin-Bro for admin panel
 
 ### Installation :
 * Download the package and run the following command in your nodejs workspace to install all the dependencies:
@@ -15,3 +15,6 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * Now run the following command to start node-server:
 <pre>nodemon app</pre>
 * Go to <a>http://localhost:3000/</a>
+
+
+### Here are screenshots of some of the pages :
