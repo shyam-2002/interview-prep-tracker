@@ -13,7 +13,7 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * Download the package and run the following command in your nodejs workspace to install all the dependencies:
 <pre>npm-install</pre>
 * Create a database collection in mongo db atlas and set the dbURI variable to the database url. 
-* Create a .env file and put your environment variables such as PORT, dbURI, secret, admin_rootpath in it. 
+* Create a .env file and put your environment variables such as PORT, dbURI, secret(string for jwt authentication), admin_rootpath(for admin panel) in it. 
 * Now run the following command to start node-server:
 <pre>nodemon app</pre>
 * Go to <a>http://localhost:3000/</a>
