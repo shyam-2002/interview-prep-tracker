@@ -8,6 +8,10 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * Admin bro for admin panel
 
 ### Installation :
-* Download the package and run the following command in your nodejs workspace :
+* Download the package and run the following command in your nodejs workspace to install all the dependencies:
 <pre>npm-install<pre>
-
+* Create a database collection in mongo db atlas and set the dbURI variable to the database url. 
+* Set the port variable to 3000
+* Now run the following command to start node-server:
+<pre>nodemon app<pre>
+* Go to {localhost:3000}
