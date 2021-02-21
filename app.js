@@ -17,7 +17,7 @@ const {log_sign_router} = require("./routes/login_signup_routes");
 const {topic_router} = require("./routes/topic_routes");
 const {experience_router} = require("./routes/experience_routes");
 
-const {admin_rootpath, router} = require("./admin_bro/admin_bro_main");
+const {admin_rootpath, router, session} = require("./admin_bro/admin_bro_main");
 
 const {isUser, auth_function} = require("./auth/authuser");
 
@@ -34,6 +34,7 @@ mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true, useCre
             console.log(err);
         })
 
+app.use(session);        
 app.use(admin_rootpath, router);
 
 

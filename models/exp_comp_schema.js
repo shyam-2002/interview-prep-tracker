@@ -25,11 +25,11 @@ const experience_schema = new Schema({
         type : Schema.Types.ObjectId,
         ref : 'company'
     },
-    // exp : {
-    //     type : String,
-    //     required : true,
-    //     minlength : [50, 'Experience is too short']
-    // },
+    exp : {
+        type : String,
+        required : true,
+        minlength : [50, 'Experience is too short']
+    },
     image_buffer : {
         type : Buffer
     },

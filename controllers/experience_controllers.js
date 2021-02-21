@@ -33,7 +33,7 @@ const experiences_get  = async(req, res)=>{
 
 const add_experience_post  = async (req, res)=>{
     console.log(req.body);
-    const {name, company_name, image} = req.body;
+    const {name, company_name, image, exp} = req.body;
     const image_object = JSON.parse(image);
     const image_data = image_object.data;
     try{
@@ -41,7 +41,7 @@ const add_experience_post  = async (req, res)=>{
         const company_id = company[0]._id;
         const buffer_data = Buffer.from(image_data);
         // console.log(buffer_data);
-        const experience = await experience_model.create({name, company_name : company_id, image_buffer : buffer_data, image_type : image_object.type})
+        const experience = await experience_model.create({name, company_name : company_id, image_buffer : buffer_data, image_type : image_object.type, exp})
         // console.log(experience);
         res.redirect("/companies");
     }
@@ -52,13 +52,13 @@ const add_experience_post  = async (req, res)=>{
 
 
 const individual_full_experience_get = async (req, res)=>{
-    
+    const company_name = req.params.company_name;
     const person_id = req.params.person_id;
     try{
       
        const person = await experience_model.findById(person_id);
        res.locals.person  = person;
-       res.render("full_experience_individual");
+       res.render("full_experience_individual", {company_name});
 
     }
     catch(err){
