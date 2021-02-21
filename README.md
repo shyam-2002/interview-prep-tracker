@@ -18,3 +18,5 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 
 
 ### Here are screenshots of some of the pages :
+* Home Page:
+<img src = "/home/Downloads/home.png">
