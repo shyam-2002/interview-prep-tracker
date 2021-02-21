@@ -7,3 +7,7 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * User Authentication using jwt
 * Admin bro for admin panel
 
+### Installation :
+* Download the package and run the following command in your nodejs workspace :
+ # npm-install
+
