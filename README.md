@@ -21,26 +21,26 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * Home Page:
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/home.png">
 
-*** Login :
+* Login :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/login_page.png">
 
-*** Signup : 
+* Signup : 
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/signup_page.png">
 
-*** Topic List :
+* Topic List :
 <img src= "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/topics.png">
 
-*** Questions for a particular topic :
+* Questions for a particular topic :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/questions.png">
 
-*** Companies List :
+* Companies List :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/companies.png">
 
-*** Experiences of a specific company :
+* Experiences of a specific company :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/experiences.png">
 
-*** Modal Form for adding experience by user :
+* Modal Form for adding experience by user :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/add_experience.png">
 
-*** About Page :
+* About Page :
 <img src = "https://github.com/shyam-2002/interviewtracker_final/blob/master/public/readme_images/about_page.png">
