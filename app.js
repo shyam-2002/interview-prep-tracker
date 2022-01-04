@@ -1,5 +1,5 @@
 
-require("dotenv").config();                              //require the dotenv package to use environmental variables 
+
 
 const express = require("express");
 const mongoose = require("mongoose");
