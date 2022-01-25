@@ -51,5 +51,5 @@ We have tried to create a solution for interview preperation of campus janta. Wh
 * Admin Panel :
 * <img src = "https://github.com/shyam-2002/interview_tracker-copy/blob/master/public/readme_images/Screenshot_2021-02-21%20Company.png">
 ### Contributers :
-This project is developed by Shyam Sundar Goyal, Harsh Sinha and Vipul Kumar under the guidance of Coding Club IIT Guwahati.
+This project is developed by ![Shyam Sundar Goyal](https://github.com/shyam-2002), ![Harsh Sinha](https://github.com/harsh6975) and Vipul Kumar under the guidance of ![Coding Club IIT Guwahati](https://www.iitg.ac.in/stud/gymkhana/technical/home/CodingHome.html).
 
