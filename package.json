@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/shyam-2002/interviewtracker_final#readme",
   "dependencies": {
-    "@admin-bro/express": "^3.1.0",
-    "@admin-bro/mongoose": "^1.1.0",
-    "admin-bro": "^3.4.0",
+    "@adminjs/express": "^5.0.0",
+    "@adminjs/mongoose": "^3.0.0",
+    "adminjs": "^6.2.2",
     "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",

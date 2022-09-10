@@ -5,9 +5,9 @@ const admin_rootpath = process.env.admin_rootpath
 const express = require("express");
 const adminbro_rout = express.Router();
 
-const AdminBro = require("admin-bro");
-const AdminBroExpress = require("@admin-bro/express");
-const AdminBroMongoose = require("@admin-bro/mongoose");
+const AdminBro = require("adminjs");
+const AdminBroExpress = require("@adminjs/express");
+const AdminBroMongoose = require("@adminjs/mongoose");
 const bcrypt = require("bcrypt");
 const express_session = require("express-session");
 
