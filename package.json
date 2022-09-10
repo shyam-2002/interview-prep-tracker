@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shyam-2002/interviewtracker_final.git"
+    "url": "https://github.com/shyam-2002/interview-prep-tracker"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shyam-2002/interviewtracker_final/issues"
+    "url": "https://github.com/shyam-2002/interview-prep-tracker/issues"
   },
-  "homepage": "https://github.com/shyam-2002/interviewtracker_final#readme",
+  "homepage": "https://github.com/shyam-2002/interview-prep-tracker#readme",
   "dependencies": {
     "@adminjs/express": "^5.0.0",
     "@adminjs/mongoose": "^3.0.0",
