@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/shyam-2002/interview-prep-tracker#readme",
   "dependencies": {
-    "@adminjs/express": "^5.0.0",
-    "@adminjs/mongoose": "^3.0.0",
-    "adminjs": "^6.2.2",
+    "@adminjs/express": "^5.1.0",
+    "@adminjs/mongoose": "^3.0.1",
+    "adminjs": "^6.8.6",
     "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
